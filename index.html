@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Michelle Tiong — Award Portfolio &amp; Supporting Materials</title>
+<meta name="description" content="Supporting portfolio for Michelle Tiong: education, career, awards, funding, patents, publications and media coverage — TOYP nomination materials.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,450;0,9..144,600;1,9..144,400;1,9..144,500&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper: #f2ede2;
+    --paper-deep: #e9e2d2;
+    --ink: #1f2b25;
+    --ink-soft: #4b5850;
+    --ink-faint: #8b9189;
+    --rust: #a8562f;
+    --core: #2f5c4c;
+    --rule: #c9bfa8;
+    --card: #faf7ee;
+    --sidebar-w: 264px;
+  }
+  *{ box-sizing: border-box; }
+  html{ scroll-behavior: smooth; }
+  body{
+    margin:0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Source Serif 4', serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  body::before{
+    content:"";
+    position: fixed; inset:0; pointer-events:none; z-index:1; opacity:.5;
+    mix-blend-mode: multiply;
+    background-image: radial-gradient(rgba(31,43,37,0.05) 1px, transparent 1px);
+    background-size: 3px 3px;
+  }
+  a{ color: var(--core); }
+
+  /* ---------------- layout shell ---------------- */
+  .shell{ display:flex; max-width: 1320px; margin: 0 auto; position: relative; z-index: 2; }
+
+  /* ---------------- sidebar ---------------- */
+  .sidebar{
+    width: var(--sidebar-w);
+    flex-shrink: 0;
+    position: sticky;
+    top: 0;
+    align-self: flex-start;
+    height: 100vh;
+    overflow-y: auto;
+    padding: 40px 20px 40px 32px;
+    border-right: 1px solid var(--rule);
+  }
+  .sidebar::-webkit-scrollbar{ width: 5px; }
+  .sidebar::-webkit-scrollbar-thumb{ background: var(--rule); border-radius: 4px; }
+
+  .brand{ margin-bottom: 34px; }
+  .brand .eyebrow{
+    font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: .2em;
+    text-transform: uppercase; color: var(--rust); margin-bottom: 8px;
+  }
+  .brand h1{
+    font-family: 'Fraunces', serif; font-style: italic; font-weight: 450;
+    font-size: 30px; margin: 0 0 4px; line-height: 1.05;
+  }
+  .brand .sub{ font-size: 12.5px; color: var(--ink-soft); line-height: 1.5; }
+
+  nav.toc{ display:flex; flex-direction:column; gap: 2px; }
+  nav.toc a{
+    font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: .03em;
+    color: var(--ink-soft); text-decoration:none; padding: 7px 10px; border-radius: 4px;
+    display:flex; justify-content: space-between; gap: 8px;
+    transition: background .18s, color .18s;
+    border-left: 2px solid transparent;
+  }
+  nav.toc a:hover{ background: rgba(47,92,76,0.07); color: var(--core); }
+  nav.toc a.active{ color: var(--core); border-left-color: var(--rust); background: rgba(47,92,76,0.07); font-weight: 500; }
+  nav.toc a .n{ color: var(--ink-faint); font-size: 10px; }
+
+  .sidebar-foot{
+    margin-top: 28px; padding-top: 18px; border-top: 1px solid var(--rule);
+    font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; color: var(--ink-faint); line-height: 1.7;
+  }
+  .sidebar-foot a{ color: var(--core); }
+
+  /* mobile nav toggle */
+  .nav-toggle{ display:none; }
+
+  /* ---------------- main ---------------- */
+  main{ flex: 1; min-width: 0; padding: 0 40px 40px; }
+
+  header.hero{ padding: 64px 0 40px; border-bottom: 1px solid var(--rule); margin-bottom: 44px; }
+  .hero .eyebrow{
+    font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: .22em;
+    text-transform: uppercase; color: var(--rust); display:flex; align-items:center; gap:12px; margin-bottom: 20px;
+  }
+  .hero .eyebrow::before{ content:""; width:26px; height:1px; background: var(--rust); }
+  .hero h2{
+    font-family: 'Fraunces', serif; font-weight: 450; font-style: italic;
+    font-size: clamp(38px, 5.4vw, 58px); line-height: 1.03; margin: 0 0 16px; letter-spacing: -0.01em;
+  }
+  .hero .role{ font-size: 16.5px; color: var(--ink-soft); max-width: 62ch; line-height: 1.6; margin: 0 0 22px; }
+  .hero .role b{ color: var(--ink); font-weight: 600; }
+  .hero .badges{ display:flex; flex-wrap:wrap; gap: 10px; margin-bottom: 22px; }
+  .hero .badge{
+    font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: .05em; text-transform: uppercase;
+    border: 1px solid rgba(47,92,76,0.35); color: var(--core); border-radius: 20px; padding: 5px 12px;
+  }
+  .stats{ display:grid; grid-template-columns: repeat(3,1fr); border-top:1px solid var(--rule); }
+  .stat{ padding: 18px 4px 2px; text-align:center; border-left: 1px solid var(--rule); }
+  .stat:first-child{ border-left:none; }
+  .stat .num{ font-family:'Fraunces', serif; font-size: 30px; font-weight:500; color: var(--core); display:block; }
+  .stat .label{ font-family:'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing:.1em; text-transform:uppercase; color: var(--ink-faint); }
+
+  section.block{ margin-bottom: 60px; scroll-margin-top: 24px; }
+  .block-head{ display:flex; align-items: baseline; gap: 14px; margin-bottom: 6px; }
+  .block-head .idx{ font-family:'IBM Plex Mono', monospace; font-size: 12px; color: var(--rust); }
+  .block-head h3{ font-family:'Fraunces', serif; font-weight: 450; font-size: 26px; margin:0; }
+  .block-note{ font-size: 13.5px; color: var(--ink-faint); font-style: italic; margin: 0 0 26px; max-width: 70ch; line-height: 1.6; }
+
+  /* item cards */
+  .item{
+    border-top: 1px solid var(--rule); padding: 24px 0; display:grid;
+    grid-template-columns: 128px 1fr; gap: 22px;
+  }
+  .item:last-child{ border-bottom: 1px solid var(--rule); }
+  .item .when{ font-family:'IBM Plex Mono', monospace; font-size: 13px; color: var(--core); padding-top: 2px; }
+  .item .body h4{ font-family:'Fraunces', serif; font-weight: 500; font-size: 18.5px; margin: 0 0 5px; line-height: 1.35; }
+  .item .org{ font-size: 14px; font-style: italic; color: var(--ink-soft); margin-bottom: 8px; }
+  .item .desc{ font-size: 14px; color: var(--ink-soft); line-height: 1.6; margin: 0 0 10px; }
+  .item .links{ display:flex; flex-wrap:wrap; gap: 12px; margin-bottom: 12px; }
+  .item .links a{
+    font-family:'IBM Plex Mono', monospace; font-size: 11px; text-decoration:none;
+    border-bottom: 1px solid rgba(47,92,76,0.35); padding-bottom:1px;
+  }
+  .item .links a:hover{ color: var(--rust); border-color: var(--rust); }
+
+  .thumbs{ display:flex; flex-wrap:wrap; gap: 8px; }
+  .thumbs img{
+    height: 92px; width: auto; max-width: 150px; object-fit: cover;
+    border: 1px solid var(--rule); border-radius: 3px; cursor: zoom-in;
+    background: var(--card); transition: transform .18s, box-shadow .18s;
+    display: block;
+  }
+  .thumbs img:hover{ transform: translateY(-2px); box-shadow: 0 6px 16px rgba(31,43,37,0.18); }
+
+  @media (max-width: 560px){
+    .item{ grid-template-columns: 1fr; }
+    .item .when{ padding-top:0; }
+  }
+
+  /* publications (reuse pattern) */
+  .pub-list{ list-style:none; margin:0; padding:0; border-top:1px solid var(--rule); }
+  .pub{ display:grid; grid-template-columns: 70px 1fr 50px; gap:18px; align-items:start; padding:20px 0; border-bottom:1px solid var(--rule); }
+  .pub-year{ font-family:'IBM Plex Mono', monospace; font-size:14px; color: var(--core); padding-top:3px; }
+  .pub-title{ font-family:'Fraunces', serif; font-size:16.5px; font-weight:450; line-height:1.35; margin:0 0 6px; }
+  .pub-venue{ font-size:13.5px; font-style:italic; color: var(--ink-soft); }
+  .pub-cite{ font-family:'IBM Plex Mono', monospace; font-size:11px; color: var(--ink-faint); text-align:right; padding-top:4px; }
+  .pub-cite b{ display:block; font-size:15px; color: var(--ink); font-weight:500; }
+  @media (max-width: 560px){
+    .pub{ grid-template-columns: 1fr; }
+    .pub-cite{ text-align:left; display:flex; gap:6px; }
+  }
+
+  /* verify box */
+  .verify{
+    background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+    padding: 26px 30px; display:flex; gap: 18px; align-items:flex-start; margin-bottom: 30px;
+  }
+  .verify .mark{ font-family:'Fraunces', serif; font-style:italic; font-size:26px; color: var(--rust); line-height:1; }
+  .verify p{ margin:0; font-size:14px; line-height:1.65; color: var(--ink-soft); max-width: 68ch; }
+
+  footer.site-foot{
+    border-top:1px solid var(--rule); padding: 22px 0 60px;
+    font-family:'IBM Plex Mono', monospace; font-size:11px; color: var(--ink-faint);
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px;
+  }
+
+  /* ---------------- lightbox ---------------- */
+  .lightbox{
+    position: fixed; inset:0; background: rgba(20,26,22,0.92); z-index: 100;
+    display:none; align-items:center; justify-content:center; padding: 40px;
+  }
+  .lightbox.open{ display:flex; }
+  .lightbox img{ max-width: 100%; max-height: 88vh; border-radius: 2px; box-shadow: 0 20px 60px rgba(0,0,0,0.5); }
+  .lightbox .lb-close, .lightbox .lb-prev, .lightbox .lb-next{
+    position:absolute; background:none; border: 1px solid rgba(242,237,226,0.3); color:var(--paper);
+    font-family:'IBM Plex Mono', monospace; cursor:pointer; border-radius: 50%;
+    width: 42px; height: 42px; font-size: 18px; display:flex; align-items:center; justify-content:center;
+    transition: background .2s;
+  }
+  .lightbox .lb-close:hover, .lightbox .lb-prev:hover, .lightbox .lb-next:hover{ background: rgba(242,237,226,0.14); }
+  .lightbox .lb-close{ top: 20px; right: 20px; }
+  .lightbox .lb-prev{ left: 20px; top: 50%; transform: translateY(-50%); }
+  .lightbox .lb-next{ right: 20px; top: 50%; transform: translateY(-50%); }
+  .lightbox .lb-count{
+    position:absolute; bottom: 18px; left:50%; transform: translateX(-50%);
+    font-family:'IBM Plex Mono', monospace; font-size: 11px; color: var(--paper); opacity:.75;
+  }
+
+  /* ---------------- mobile ---------------- */
+  @media (max-width: 860px){
+    .shell{ flex-direction: column; }
+    .sidebar{
+      position: relative; width: 100%; height: auto; border-right:none; border-bottom:1px solid var(--rule);
+      padding: 20px 20px;
+    }
+    nav.toc{ display:none; flex-wrap: wrap; flex-direction: row; gap: 6px; }
+    nav.toc.open{ display:flex; }
+    .nav-toggle{
+      display:flex; align-items:center; gap:8px; font-family:'IBM Plex Mono', monospace; font-size:11px;
+      letter-spacing:.08em; text-transform:uppercase; background:none; border:1px solid var(--rule);
+      color: var(--ink-soft); padding: 8px 14px; border-radius: 20px; cursor:pointer; margin-top: 6px;
+    }
+    main{ padding: 0 20px 40px; }
+    .sidebar-foot{ display:none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="shell">
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="eyebrow">Award Portfolio</div>
+      <h1>Michelle Tiong</h1>
+      <div class="sub">Supporting materials — TOYP nomination &amp; curriculum vitae supplement</div>
+    </div>
+    <button class="nav-toggle" id="navToggle">☰ Sections</button>
+    <nav class="toc" id="toc"></nav>
+    <div class="sidebar-foot">
+      Compiled 2026 · Verifiable exhibits<br>
+      <a href="https://scholar.google.com.my/citations?user=OQtHbosAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar profile ↗</a>
+    </div>
+  </aside>
+
+  <main>
+    <header class="hero">
+      <div class="eyebrow">Supporting Portfolio</div>
+      <h2>Michelle Tiong, PhD</h2>
+      <p class="role"><b>Associate Professor &amp; International Cooperation and Development Director</b>, Xi&#x2019;an Shiyou University · <b>Secretary General</b>, MAYCHAM CHINA (Malaysian Chamber of Commerce and Industry in China). Research spans CO&#x2082; capture, utilization and storage, well-cement integrity, and carbon mineralization &#x2014; recognized in 2025 as one of Malaysia&#x2019;s Top 10 Outstanding Young Persons (national level), now compiled here as supporting evidence for international TOYP nomination.</p>
+      <div class="badges">
+        <span class="badge">CCUS &amp; Carbon Mineralization</span>
+        <span class="badge">China&#x2013;Malaysia Diplomacy</span>
+        <span class="badge">Xi&#x2019;an Shiyou University</span>
+        <span class="badge">MAYCHAM China</span>
+      </div>
+      <div class="stats">
+        <div class="stat"><span class="num">17</span><span class="label">Recognition Categories</span></div>
+        <div class="stat"><span class="num">66</span><span class="label">Verifying Exhibits</span></div>
+        <div class="stat"><span class="num">2020&#x2013;2026</span><span class="label">Span of Record</span></div>
+      </div>
+    </header>
+
+    <div id="sections"></div>
+
+    <footer class="site-foot">
+      <span>Compiled from official award, funding, and media records — 2026</span>
+      <span>All certificates and screenshots are original source documents</span>
+    </footer>
+  </main>
+</div>
+
+<div class="lightbox" id="lightbox">
+  <button class="lb-close" id="lbClose">&times;</button>
+  <button class="lb-prev" id="lbPrev">&#8249;</button>
+  <img id="lbImg" src="" alt="">
+  <button class="lb-next" id="lbNext">&#8250;</button>
+  <div class="lb-count" id="lbCount"></div>
+</div>
+
+<script>
+const IMG = n => `assets/img/image${n}.jpg`;
+
+const sections = [
+  {
+    id: "awards", title: "Awards & Honours",
+    note: "National and institutional recognition of research and professional contribution.",
+    items: [
+      { when: "2026", title: "Curtin University Young Achievement Award (青年成就奖)", org: "Curtin University, Malaysia", desc: "Awarded at the 2026 Curtin Alumni Awards & Homecoming event in Miri as one of six outstanding Malaysian alumni honoured.", links: [{label:"News coverage ↗", url:"https://news.curtin.edu.my/news/curtin-honours-six-outstanding-malaysian-alumni-at-2026-awards-and-homecoming-event-in-miri/"}], images: [18,19] },
+      { when: "2025", title: "Malaysia Top 10 Outstanding Young Persons Award (十大杰出青年奖)", org: "National level — Malaysia", desc: "National-level recognition as one of Malaysia's Top 10 Outstanding Young Persons.", links: [{label:"Sarawak Government news ↗", url:"https://premierdept.sarawak.gov.my/web/subpage/news_view/23267"}, {label:"UKAS coverage ↗", url:"https://premierdept.sarawak.gov.my/web/subpage/news_view/25192/UKAS"}], images: [20,21] },
+    ]
+  },
+  {
+    id: "global-recognition", title: "Global Recognition",
+    note: "International selection and delegate programmes.",
+    items: [
+      { when: "2025", title: "Global Youth Leaders Dialogue (GYLD · Haidian Talent Week)", org: "Beijing, China", desc: "Selected as one of 21 global youth representatives of the year to participate in international dialogue on artificial intelligence and sustainable development.", images: [38,39] },
+      { when: "2025", title: "Capital Science Popularization \"Star Action\"", org: "Beijing Association for Science and Technology · Tsinghua University science outreach programme", desc: "Hosted by the Beijing Association for Science and Technology, organized by the Beijing Science Popularization Development & Research Center and the Beijing Science Popularization Creation Association.", images: [40,41] },
+      { when: "2024", title: "GWNET Women in Energy Storage Mentoring Programme", org: "Global Women's Network for the Energy Transition (GWNET)", desc: "Selected as the sole China–Malaysia representative in GWNET's global Women in Energy Storage mentoring programme.", links: [{label:"Programme page ↗", url:"https://globalwomennet.org/mentoring-program/women-in-energy-storage-mentoring-program-2024/"}], images: [42,43,44] },
+    ]
+  },
+  {
+    id: "career", title: "Career",
+    note: "Academic and industry appointments, in order of the supporting record.",
+    items: [
+      { when: "Current", title: "Associate Professor & International Cooperation and Development Director", org: "Xi'an Shiyou University — Marginal Oil & Gas Development Technology Research Institute", desc: "Leads international cooperation and development alongside research in marginal oil & gas and CCUS technologies.", images: [4,5] },
+      { when: "", title: "Postdoctoral & Assistant Researcher", org: "China University of Petroleum (Beijing)", desc: "", images: [6,7] },
+      { when: "", title: "Visiting Scholar", org: "Beijing Institute of Nanoenergy and Nanosystems, Chinese Academy of Sciences (CAS)", desc: "", images: [8] },
+      { when: "", title: "Postdoctoral Researcher", org: "Hunan University", desc: "", images: [9] },
+      { when: "", title: "Geologist Intern", org: "Murphy Oil", desc: "", images: [10] },
+    ]
+  },
+  {
+    id: "education", title: "Education",
+    note: "",
+    items: [
+      { when: "PhD", title: "Doctor of Philosophy", org: "Curtin University Australia (Malaysia Division)", desc: "", images: [1] },
+      { when: "MSc", title: "Master's Degree", org: "University College Dublin, Ireland", desc: "", images: [2] },
+      { when: "BEng", title: "Bachelor's Degree", org: "Universiti Teknologi PETRONAS, Malaysia", desc: "", images: [3] },
+    ]
+  },
+  {
+    id: "publications", title: "Key Publications",
+    note: "16 peer-reviewed journal articles (2019–2026). Full record independently verifiable on Google Scholar.",
+    isPubs: true,
+  },
+  {
+    id: "innovation", title: "Patents, Software & Technology Transfer",
+    note: "Registered intellectual property and applied research output.",
+    items: [
+      { when: "", title: "Technology Transfer Record", org: "", desc: "", images: [54] },
+      { when: "", title: "Granted / Filed Patents", org: "", desc: "", images: [55,56] },
+      { when: "", title: "Software Copyright Registration", org: "", desc: "", images: [57] },
+    ]
+  },
+  {
+    id: "competitions", title: "Competitions & Challenges",
+    note: "International innovation competitions in carbon dioxide removal and low-carbon materials.",
+    items: [
+      { when: "2025", title: "SMART CDR Competition — Global Top 24 (China's only team)", org: "Mission Innovation", desc: "", links:[{label:"Competition page ↗", url:"https://mission-innovation.net/missions/carbon-dioxide-removal/smart-cdr-competition/"}], images: [27] },
+      { when: "2024", title: "The Innovandi Open Challenge — Global Top 30", org: "Global Cement and Concrete Association (GCCA)", desc: "Entry: CR2A — a low-carbon cement innovation; one of only two mainland China teams selected.", links:[{label:"Challenge page ↗", url:"https://gccassociation.org/innovandi/openchallenge24/"}], images: [28] },
+      { when: "2021", title: "XPRIZE Carbon Removal — China Region Top 10", org: "Musk Foundation / XPRIZE", desc: "", images: [29] },
+    ]
+  },
+  {
+    id: "academic-awards", title: "Academic Awards",
+    note: "",
+    items: [
+      { when: "2023", title: "Innovation & Invention Second Prize", org: "China Invention Association", desc: "「提高原油采收率和井壁完整性的功能性纳米材料的关键技术和应用」 — Key technologies and applications of functional nanomaterials for improving crude oil recovery and wellbore integrity.", images: [33] },
+      { when: "2024", title: "Best Oral Presentation Award", org: "International Conference on Energy Transition and Exhibition (ICETE24)", desc: "", images: [34,25] },
+      { when: "2021", title: "PhD Posters Competition", org: "", desc: "", images: [35] },
+      { when: "2022–2023", title: "Best Innovation Mentor", org: "", desc: "", images: [36] },
+      { when: "2021", title: "XPRIZE Top 10", org: "Musk Foundation / XPRIZE", desc: "", images: [37] },
+    ]
+  },
+  {
+    id: "conferences", title: "Conferences",
+    note: "",
+    items: [
+      { when: "2023", title: "Annual Academic Conference of the Climate Change Working Committee & 2nd CCUS Technology Conference", org: "China Society for Sustainable Development (Sep 22–24, 2023)", desc: "", images: [22] },
+      { when: "2023", title: "7th CCUS International Forum — Youth Academic Forum", org: "Mar 17–18, 2023", desc: "", images: [23] },
+      { when: "2024", title: "2nd China Environmental Science Youth Forum", org: "《中国环境科学》青年论坛", desc: "", images: [24] },
+      { when: "2024", title: "International Conference on Energy Transition and Exhibition (ICETE24)", org: "", desc: "", images: [25] },
+      { when: "2024", title: "Global Young Academy Asian Event — Global Pi Roundtable", org: "", desc: "", images: [26] },
+    ]
+  },
+  {
+    id: "funding", title: "Funding & Science Foundations",
+    note: "Competitive foreign-scholar research grants, as applicant.",
+    items: [
+      { when: "2025–2026", title: "National Natural Science Foundation of China — Foreign Scholar Programme", org: "Applicant · Jan 2025 – Dec 2026", desc: "", images: [30] },
+      { when: "2023–2025", title: "Beijing Natural Science Foundation — Foreign Scholar Programme", org: "Applicant · Oct 2023 – Sep 2025", desc: "", images: [31,32] },
+    ]
+  },
+  {
+    id: "affiliation", title: "Professional Affiliations",
+    note: "",
+    items: [
+      { when: "", title: "Secretary General", org: "MAYCHAM CHINA — Malaysian Chamber of Commerce and Industry in China", desc: "", images: [11] },
+      { when: "", title: "Certified CO₂-EOR Engineer", org: "", desc: "", images: [12] },
+      { when: "", title: "Certified Technologist", org: "Malaysia Board of Technologists (MBOT)", desc: "", images: [13] },
+      { when: "", title: "Peer Reviewer", org: "", desc: "", images: [14] },
+      { when: "", title: "Member", org: "International Disaster Response Network", desc: "", images: [15] },
+      { when: "", title: "Invited Trainer", org: "National ICAN China Youth Green Development Innovation Competition", desc: "", images: [16] },
+      { when: "", title: "Alumni Mentor", org: "University College Dublin", desc: "", images: [17] },
+    ]
+  },
+  {
+    id: "organizing", title: "Organizing & Community Leadership",
+    note: "",
+    items: [
+      { when: "2026", title: "China–Malaysia Youth Study Programme", org: "Organizer", desc: "", links:[{label:"Article ↗", url:"https://mp.weixin.qq.com/s/l9AHFpF4_DxykJ3_QvPVGg"}], images: [45] },
+      { when: "2025", title: "China–Malaysia AI Innovation Cooperation MOU", org: "Facilitated signing via the Qidian Star platform", desc: "", links:[{label:"Article ↗", url:"https://mp.weixin.qq.com/s/lyLBbn4erJEtACdniBsKLA"}], images: [46] },
+      { when: "2024", title: "\"Green Bridge: China–Malaysia Green Energy Cooperation & Market Opportunities\"", org: "Planned, organized, and hosted online webinar", desc: "", links:[{label:"Article ↗", url:"https://mp.weixin.qq.com/s/WNOCGgZ5J3nEsfQ7OdWUEA"}], images: [47,48] },
+    ]
+  },
+  {
+    id: "diplomatic", title: "Diplomatic Events",
+    note: "",
+    items: [
+      { when: "2024", title: "State Banquet — 50th Anniversary of China–Malaysia Diplomatic Relations", org: "Diaoyutai State Guesthouse, Beijing", desc: "", images: [49,50] },
+      { when: "2024", title: "Reception for the 75th Anniversary of the Founding of the People's Republic of China", org: "Foreign Experts Reception, invited attendee", desc: "", images: [51,52] },
+      { when: "2024", title: "Received by Malaysia's Yang di-Pertuan Agong during State Visit to China", org: "Beijing — covered by official media", desc: "", images: [53] },
+    ]
+  },
+  {
+    id: "courses", title: "Course Completion & Speaker Certificates",
+    note: "",
+    items: [
+      { when: "2025", title: "Course Completion Certificate", org: "Cited by the author as a personally formative programme", desc: "", images: [58] },
+      { when: "", title: "Speaker Certificate — Sabah Convention", org: "", desc: "", images: [59] },
+      { when: "", title: "Speaker Certificate — JCI", org: "", desc: "", images: [60] },
+    ]
+  },
+  {
+    id: "media", title: "Media Coverage",
+    note: "",
+    items: [
+      { when: "2020", title: "Featured UCD Alumni", org: "University College Dublin Alumni Magazine", desc: "", links:[{label:"Read feature ↗", url:"https://alumni.ucd.ie/magazine/2020/irelands-global-university/"}], images: [17,61,62] },
+      { when: "", title: "Alumni Spotlight", org: "Curtin University Malaysia — 25th Anniversary Series", desc: "", links:[{label:"YouTube ↗", url:"https://www.youtube.com/watch?v=JejgyeaXUEw&ab_channel=CurtinUniversityMalaysia"}, {label:"Facebook ↗", url:"https://www.facebook.com/CurtinMalaysia/videos/alumni-spotlight-dr-michelle-tiong-curtin-malaysias-25th-anniversary-series/513677764985042/"}], images: [] },
+      { when: "", title: "Interviewed as an International Researcher in China", org: "", desc: "", links:[{label:"Read article ↗", url:"https://mp.weixin.qq.com/s/EwowxkLEGtyXNcJxuY9T9g"}], images: [63] },
+      { when: "", title: "Interviewed as One Belt One Road Youth Representative", org: "", desc: "", links:[{label:"Read article ↗", url:"https://www.163.com/dy/article/HFB3SNI80552M4Y3.html"}], images: [64] },
+      { when: "", title: "Featured — Sharing of One Belt One Road Youth Representative", org: "", desc: "", links:[{label:"Read article ↗", url:"https://mp.weixin.qq.com/s/wzXFqKMA029HJBNVaA_A5Q"}], images: [65] },
+      { when: "2025", title: "Featured in Sarawak Government Media for TOYM Award", org: "", desc: "", links:[{label:"Read article ↗", url:"https://premierdept.sarawak.gov.my/web/subpage/news_view/25192/UKAS"}], images: [66] },
+    ]
+  },
+];
+
+const pubs = [
+  { year: 2026, title: "Machine learning across the lifecycle of geological CO2 storage", venue: "Clean Energy, zkag027", cites: 0 },
+  { year: 2025, title: "Review on in-situ CO2 mineralization sequestration: mechanistic understanding and research frontiers", venue: "International Journal of Coal Science & Technology, 12(1), 15", cites: 55 },
+  { year: 2025, title: "Recent advancements in durable and self-healing oil well cement", venue: "Journal of CO2 Utilization, 92, 103036", cites: 11 },
+  { year: 2025, title: "Experimental investigation and molecular simulations of CQDs for asphaltene deposition inhibition during CO2-EOR", venue: "Fuel, 394, 135145", cites: 9 },
+  { year: 2025, title: "Recent applications of carbonic anhydrase and its mimics in CO2 capture and utilization technologies", venue: "Geoenergy Science and Engineering, 252, 213958", cites: 6 },
+  { year: 2025, title: "Natural gas hydrate exploitation: A comprehensive review", venue: "Gas Science and Engineering, 205769", cites: 6 },
+  { year: 2024, title: "Quantitative characterization of recycled cementitious materials before and after carbonation curing", venue: "Construction and Building Materials, 421, 135596", cites: 26 },
+  { year: 2024, title: "A review on cementitious composite incorporating carbon nanomaterials", venue: "Geoenergy Science and Engineering, 240, 212997", cites: 9 },
+  { year: 2024, title: "Mitigating Asphaltene Deposition in CO2 Flooding with Carbon Quantum Dots", venue: "Energies, 17(11), 2758", cites: 8 },
+  { year: 2024, title: "Review on key parameters and storage capacity potential assessment for in-situ carbon mineralization site", venue: "Chemical Industry and Engineering Progress, 43(3), 1492", cites: 4 },
+  { year: 2023, title: "Review on CO2 Mineral Carbonation-Cured Cement-Based Materials", venue: "Bulletin of the Chinese Ceramic Society, 42(6)", cites: 12 },
+  { year: 2022, title: "Effects of moulding pressure and w/c induced pore water saturation on the CO2 curing efficiency of dry-mix cement blocks", venue: "Construction and Building Materials, 335, 127509", cites: 28 },
+  { year: 2022, title: "Recycling Bayer and sintering red muds in brick production: A review", venue: "Journal of Zhejiang University-SCIENCE A, 23(5), 335-357", cites: 19 },
+  { year: 2020, title: "Nanomodification: An efficient method to improve cement integrity in CO2 storage sites", venue: "Journal of Natural Gas Science and Engineering, 84, 103612", cites: 33 },
+  { year: 2019, title: "Cement degradation in CO2 storage sites: a review on potential applications of nanomaterials", venue: "Journal of Petroleum Exploration and Production Technology, 9(1), 329-340", cites: 50 },
+  { year: 2019, title: "A pozzolanic supplementary material to reinforce class G cement used for drilling and completion operations", venue: "Journal of Petroleum Science and Engineering, 177, 79-92", cites: 34 },
+];
+
+// ---- render ----
+const secWrap = document.getElementById('sections');
+const tocWrap = document.getElementById('toc');
+let allGalleries = []; // flattened for lightbox lookups keyed by data-gallery id
+
+sections.forEach((sec, si) => {
+  const secEl = document.createElement('section');
+  secEl.className = 'block';
+  secEl.id = sec.id;
+
+  const idxStr = String(si + 1).padStart(2, '0');
+  secEl.innerHTML = `
+    <div class="block-head"><span class="idx">${idxStr}</span><h3>${sec.title}</h3></div>
+    ${sec.note ? `<p class="block-note">${sec.note}</p>` : ''}
+  `;
+
+  if (sec.isPubs) {
+    const list = document.createElement('ul');
+    list.className = 'pub-list';
+    list.innerHTML = pubs.map(p => `
+      <li class="pub">
+        <div class="pub-year">${p.year}</div>
+        <div>
+          <h4 class="pub-title" style="font-size:16.5px;margin:0 0 6px;">${p.title}</h4>
+          <div class="pub-venue">${p.venue}</div>
+        </div>
+        <div class="pub-cite"><b>${p.cites}</b>cites</div>
+      </li>
+    `).join('');
+    secEl.appendChild(list);
+    const link = document.createElement('p');
+    link.className = 'block-note';
+    link.style.marginTop = '18px';
+    link.innerHTML = `<a href="https://scholar.google.com.my/citations?user=OQtHbosAAAAJ&hl=en" target="_blank" rel="noopener">View full publication record on Google Scholar ↗</a>`;
+    secEl.appendChild(link);
+  } else {
+    sec.items.forEach((it, ii) => {
+      const galleryId = `${sec.id}-${ii}`;
+      if (it.images && it.images.length) allGalleries.push({ id: galleryId, images: it.images });
+
+      const row = document.createElement('div');
+      row.className = 'item';
+      row.innerHTML = `
+        <div class="when">${it.when || ''}</div>
+        <div class="body">
+          <h4>${it.title}</h4>
+          ${it.org ? `<div class="org">${it.org}</div>` : ''}
+          ${it.desc ? `<p class="desc">${it.desc}</p>` : ''}
+          ${it.links && it.links.length ? `<div class="links">${it.links.map(l => `<a href="${l.url}" target="_blank" rel="noopener">${l.label}</a>`).join('')}</div>` : ''}
+          ${it.images && it.images.length ? `<div class="thumbs" data-gallery="${galleryId}">${it.images.map((n, idx) => `<img src="${IMG(n)}" alt="${it.title}" loading="lazy" data-idx="${idx}">`).join('')}</div>` : ''}
+        </div>
+      `;
+      secEl.appendChild(row);
+    });
+  }
+
+  secWrap.appendChild(secEl);
+
+  const tocLink = document.createElement('a');
+  tocLink.href = `#${sec.id}`;
+  tocLink.innerHTML = `<span>${sec.title}</span><span class="n">${idxStr}</span>`;
+  tocWrap.appendChild(tocLink);
+});
+
+// verification box + footer (after all sections)
+const verify = document.createElement('div');
+verify.className = 'verify';
+verify.innerHTML = `<div class="mark">&#10003;</div><p>Every award, funding record, patent, and media feature above is drawn from original certificates, official announcements, and public news coverage. Click any image to view it at full resolution.</p>`;
+secWrap.appendChild(verify);
+
+// ---- lightbox ----
+const lightbox = document.getElementById('lightbox');
+const lbImg = document.getElementById('lbImg');
+const lbCount = document.getElementById('lbCount');
+let currentGallery = null, currentIdx = 0;
+
+function openLightbox(galleryId, idx){
+  const g = allGalleries.find(g => g.id === galleryId);
+  if (!g) return;
+  currentGallery = g; currentIdx = idx;
+  renderLb();
+  lightbox.classList.add('open');
+}
+function renderLb(){
+  const n = currentGallery.images[currentIdx];
+  lbImg.src = IMG(n);
+  lbCount.textContent = currentGallery.images.length > 1 ? `${currentIdx+1} / ${currentGallery.images.length}` : '';
+}
+function closeLightbox(){ lightbox.classList.remove('open'); }
+function step(delta){
+  if (!currentGallery) return;
+  currentIdx = (currentIdx + delta + currentGallery.images.length) % currentGallery.images.length;
+  renderLb();
+}
+
+document.addEventListener('click', (e) => {
+  const img = e.target.closest('.thumbs img');
+  if (img){
+    const galleryId = img.closest('.thumbs').dataset.gallery;
+    openLightbox(galleryId, Number(img.dataset.idx));
+  }
+});
+document.getElementById('lbClose').addEventListener('click', closeLightbox);
+document.getElementById('lbPrev').addEventListener('click', () => step(-1));
+document.getElementById('lbNext').addEventListener('click', () => step(1));
+lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
+document.addEventListener('keydown', (e) => {
+  if (!lightbox.classList.contains('open')) return;
+  if (e.key === 'Escape') closeLightbox();
+  if (e.key === 'ArrowLeft') step(-1);
+  if (e.key === 'ArrowRight') step(1);
+});
+
+// ---- mobile nav toggle ----
+document.getElementById('navToggle').addEventListener('click', () => {
+  document.getElementById('toc').classList.toggle('open');
+});
+
+// ---- scrollspy ----
+const tocLinks = Array.from(document.querySelectorAll('nav.toc a'));
+const blocks = Array.from(document.querySelectorAll('section.block'));
+const spy = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting){
+      tocLinks.forEach(l => l.classList.remove('active'));
+      const link = tocLinks.find(l => l.getAttribute('href') === `#${entry.target.id}`);
+      if (link) link.classList.add('active');
+    }
+  });
+}, { rootMargin: '-20% 0px -70% 0px' });
+blocks.forEach(b => spy.observe(b));
+</script>
+</body>
+</html>
