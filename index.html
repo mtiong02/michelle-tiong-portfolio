@@ -249,9 +249,9 @@
         <span class="badge">MAYCHAM China</span>
       </div>
       <div class="stats">
-        <div class="stat"><span class="num">17</span><span class="label">Recognition Categories</span></div>
-        <div class="stat"><span class="num">66</span><span class="label">Verifying Exhibits</span></div>
-        <div class="stat"><span class="num">2020&#x2013;2026</span><span class="label">Span of Record</span></div>
+        <div class="stat"><span class="num">13</span><span class="label">Recognition Categories</span></div>
+        <div class="stat"><span class="num">72</span><span class="label">Verifying Exhibits</span></div>
+        <div class="stat"><span class="num">2011&#x2013;2026</span><span class="label">Span of Record</span></div>
       </div>
     </header>
 
@@ -277,40 +277,80 @@ const IMG = n => `assets/img/image${n}.jpg`;
 
 const sections = [
   {
-    id: "awards", title: "Awards & Honours",
-    note: "National and institutional recognition of research and professional contribution.",
+    id: "education", title: "Education",
+    note: "",
     items: [
-      { when: "2026", title: "Curtin University Young Achievement Award (青年成就奖)", org: "Curtin University, Malaysia", desc: "Awarded at the 2026 Curtin Alumni Awards & Homecoming event in Miri as one of six outstanding Malaysian alumni honoured.", links: [{label:"News coverage ↗", url:"https://news.curtin.edu.my/news/curtin-honours-six-outstanding-malaysian-alumni-at-2026-awards-and-homecoming-event-in-miri/"}], images: [18,19] },
-      { when: "2025", title: "Malaysia Top 10 Outstanding Young Persons Award (十大杰出青年奖)", org: "National level — Malaysia", desc: "National-level recognition as one of Malaysia's Top 10 Outstanding Young Persons.", links: [{label:"Sarawak Government news ↗", url:"https://premierdept.sarawak.gov.my/web/subpage/news_view/23267"}, {label:"UKAS coverage ↗", url:"https://premierdept.sarawak.gov.my/web/subpage/news_view/25192/UKAS"}], images: [20,21] },
-    ]
-  },
-  {
-    id: "global-recognition", title: "Global Recognition",
-    note: "International selection and delegate programmes.",
-    items: [
-      { when: "2025", title: "Global Youth Leaders Dialogue (GYLD · Haidian Talent Week)", org: "Beijing, China", desc: "Selected as one of 21 global youth representatives of the year to participate in international dialogue on artificial intelligence and sustainable development.", images: [38,39] },
-      { when: "2025", title: "Capital Science Popularization \"Star Action\"", org: "Beijing Association for Science and Technology · Tsinghua University science outreach programme", desc: "Hosted by the Beijing Association for Science and Technology, organized by the Beijing Science Popularization Development & Research Center and the Beijing Science Popularization Creation Association.", images: [40,41] },
-      { when: "2024", title: "GWNET Women in Energy Storage Mentoring Programme", org: "Global Women's Network for the Energy Transition (GWNET)", desc: "Selected as the sole China–Malaysia representative in GWNET's global Women in Energy Storage mentoring programme.", links: [{label:"Programme page ↗", url:"https://globalwomennet.org/mentoring-program/women-in-energy-storage-mentoring-program-2024/"}], images: [42,43,44] },
+      { when: "2016–2020", title: "PhD", org: "Curtin University Australia", desc: "", images: [1] },
+      { when: "2015–2016", title: "Master's Degree", org: "University College Dublin, Ireland", desc: "", images: [2] },
+      { when: "2011–2015", title: "Bachelor's Degree", org: "Universiti Teknologi PETRONAS, Malaysia", desc: "", images: [3] },
     ]
   },
   {
     id: "career", title: "Career",
-    note: "Academic and industry appointments, in order of the supporting record.",
+    note: "",
     items: [
-      { when: "Current", title: "Associate Professor & International Cooperation and Development Director", org: "Xi'an Shiyou University — Marginal Oil & Gas Development Technology Research Institute", desc: "Leads international cooperation and development alongside research in marginal oil & gas and CCUS technologies.", images: [4,5] },
-      { when: "", title: "Postdoctoral & Assistant Researcher", org: "China University of Petroleum (Beijing)", desc: "", images: [6,7] },
-      { when: "", title: "Visiting Scholar", org: "Beijing Institute of Nanoenergy and Nanosystems, Chinese Academy of Sciences (CAS)", desc: "", images: [8] },
-      { when: "", title: "Postdoctoral Researcher", org: "Hunan University", desc: "", images: [9] },
-      { when: "", title: "Geologist Intern", org: "Murphy Oil", desc: "", images: [10] },
+      { when: "Nov 2025–Present", title: "Associate Professor & International Cooperation and Development Director", org: "Xi'an Shiyou University", desc: "", images: [4,5] },
+      { when: "Jul 2022–Sep 2025", title: "Postdoctoral & Assistant Researcher", org: "China University of Petroleum (Beijing), China", desc: "", images: [6,7] },
+      { when: "Oct 2022–Oct 2023", title: "Visiting Scholar", org: "Beijing Institute of Nanoenergy and Nanosystems, Chinese Academy of Sciences, China", desc: "", images: [8] },
+      { when: "Jun 2020–Apr 2022", title: "Postdoctoral Researcher", org: "Hunan University", desc: "", images: [9] },
+      { when: "Jan 2014–Aug 2014", title: "Geologist Intern", org: "Murphy Oil", desc: "", images: [10] },
     ]
   },
   {
-    id: "education", title: "Education",
+    id: "affiliation", title: "Affiliation",
     note: "",
     items: [
-      { when: "PhD", title: "Doctor of Philosophy", org: "Curtin University Australia (Malaysia Division)", desc: "", images: [1] },
-      { when: "MSc", title: "Master's Degree", org: "University College Dublin, Ireland", desc: "", images: [2] },
-      { when: "BEng", title: "Bachelor's Degree", org: "Universiti Teknologi PETRONAS, Malaysia", desc: "", images: [3] },
+      { when: "", title: "Secretary General", org: "MAYCHAM CHINA — Malaysian Chamber of Commerce and Industry in China", desc: "The first chamber of commerce legally registered and officially recognized by Malaysian authorities outside of Malaysia, with active regional chapters across mainland China including Beijing, Shanghai, Guangzhou, Kunming, and Xi'an.", images: [11] },
+      { when: "", title: "Certified CO₂-EOR Engineer", org: "", desc: "", images: [12] },
+      { when: "", title: "Certified Technologist", org: "Malaysia Board of Technologists (MBOT)", desc: "", images: [13] },
+      { when: "", title: "Peer Reviewer", org: "", desc: "", images: [14] },
+      { when: "", title: "Member", org: "International Disaster Response Network", desc: "", images: [15] },
+      { when: "", title: "Trainer", org: "National ICAN China Youth Green Development Innovation Competition", desc: "", images: [16] },
+      { when: "", title: "Alumni Mentor", org: "University College Dublin", desc: "", links:[{label:"UCD Alumni ↗", url:"https://alumni.ucd.ie/magazine/category/2020/"}], images: [17] },
+      { when: "", title: "Curtin High Degree Research Representative", org: "", desc: "", images: [18] },
+    ]
+  },
+  {
+    id: "scholarly-honor", title: "Scholarly Honor",
+    note: "",
+    items: [
+      { when: "2026", title: "Curtin University Young Achievement Award (青年成就奖)", org: "Curtin University, Malaysia", desc: "", links: [{label:"News coverage ↗", url:"https://news.curtin.edu.my/news/curtin-honours-six-outstanding-malaysian-alumni-at-2026-awards-and-homecoming-event-in-miri/"}], images: [19,20] },
+      { when: "2025", title: "Ten Outstanding Young Malaysians (TOYM)", org: "National level — Malaysia", desc: "", links: [{label:"Sarawak Government news ↗", url:"https://premierdept.sarawak.gov.my/web/subpage/news_view/23267"}, {label:"UKAS coverage ↗", url:"https://premierdept.sarawak.gov.my/web/subpage/news_view/25192/UKAS"}], images: [21,22] },
+      { when: "2025", title: "Global Young Leaders Dialogue Annual Forum, Haidian Talent Week", org: "Beijing, China", desc: "Panelist for AI and Sustainability.", images: [23,24] },
+      { when: "2025", title: "Science Communication Star", org: "", desc: "", images: [25,26] },
+      { when: "2024", title: "GWNET Sole Malaysia-China Representative", org: "Global Women's Network for the Energy Transition (GWNET)", desc: "", links: [{label:"Programme page ↗", url:"https://globalwomennet.org/mentoring-program/women-in-energy-storage-mentoring-program-2024/"}], images: [27,28,29] },
+    ]
+  },
+  {
+    id: "grants", title: "Research Grant / Scholarship",
+    note: "",
+    items: [
+      { when: "2025.01.01–2026.12.31", title: "National Science Foundation China", org: "Principal Investigator", desc: "", images: [30] },
+      { when: "2023.10.01–2025.09.30", title: "Beijing Natural Science Foundation China", org: "Principal Investigator", desc: "", images: [31] },
+      { when: "2018 / 2019", title: "Yayasan Sarawak Scholarship", org: "", desc: "", images: [32] },
+    ]
+  },
+  {
+    id: "invited-speaker", title: "Invited Speaker / Presenter",
+    note: "",
+    items: [
+      { when: "2026", title: "JCI Area Convention", org: "", desc: "AI Workshop at JCI Malaysia Area Sabah Convention; AI Workshop at JCI Malaysia Area Sarawak Convention.", images: [33,34] },
+      { when: "2026", title: "International CCUS Conference", org: "Beijing, China", desc: "", images: [35,36] },
+      { when: "2025", title: "ADIPEC Conference", org: "Abu Dhabi, United Arab Emirates", desc: "", images: [37] },
+      { when: "2024", title: "Global Young Academy Asian Event — Global Pi Roundtable", org: "Wenzhou, China", desc: "", images: [38] },
+      { when: "2024", title: "International Conference on Energy Transition and Exhibition (ICETE24)", org: "Miri, Malaysia", desc: "", images: [39] },
+      { when: "2023", title: "Annual Academic Conference of the Climate Change Working Committee & 2nd CCUS Technology Conference", org: "China Society for Sustainable Development (Sep 22–24, 2023)", desc: "", images: [40] },
+    ]
+  },
+  {
+    id: "academic-award", title: "Academic Award",
+    note: "",
+    items: [
+      { when: "2023", title: "China National Invention Second Prize", org: "", desc: "《提高原油采收率和井壁完整性的功能性纳米材料的关键技术和应用》 — Key technologies and applications of functional nanomaterials for improving crude oil recovery and wellbore integrity.", images: [41] },
+      { when: "2023 & 2024", title: "Mentored Students in Green Development Entrepreneurship Contest", org: "", desc: "", images: [42,43] },
+      { when: "2022–2023", title: "Best Innovation Mentor", org: "", desc: "", images: [44] },
+      { when: "2024", title: "Best Oral Presentation Award", org: "International Conference on Energy Transition and Exhibition (ICETE24)", desc: "", images: [45] },
+      { when: "2021", title: "PhD Posters Competition", org: "Global Winner", desc: "", images: [46] },
     ]
   },
   {
@@ -319,103 +359,53 @@ const sections = [
     isPubs: true,
   },
   {
-    id: "innovation", title: "Patents, Software & Technology Transfer",
-    note: "Registered intellectual property and applied research output.",
-    items: [
-      { when: "", title: "Technology Transfer Record", org: "", desc: "", images: [54] },
-      { when: "", title: "Granted / Filed Patents", org: "", desc: "", images: [55,56] },
-      { when: "", title: "Software Copyright Registration", org: "", desc: "", images: [57] },
-    ]
-  },
-  {
-    id: "competitions", title: "Competitions & Challenges",
-    note: "International innovation competitions in carbon dioxide removal and low-carbon materials.",
-    items: [
-      { when: "2025", title: "SMART CDR Competition — Global Top 24 (China's only team)", org: "Mission Innovation", desc: "", links:[{label:"Competition page ↗", url:"https://mission-innovation.net/missions/carbon-dioxide-removal/smart-cdr-competition/"}], images: [27] },
-      { when: "2024", title: "The Innovandi Open Challenge — Global Top 30", org: "Global Cement and Concrete Association (GCCA)", desc: "Entry: CR2A — a low-carbon cement innovation; one of only two mainland China teams selected.", links:[{label:"Challenge page ↗", url:"https://gccassociation.org/innovandi/openchallenge24/"}], images: [28] },
-      { when: "2021", title: "XPRIZE Carbon Removal — China Region Top 10", org: "Musk Foundation / XPRIZE", desc: "", images: [29] },
-    ]
-  },
-  {
-    id: "academic-awards", title: "Academic Awards",
+    id: "competitions", title: "Competitions / Challenges",
     note: "",
     items: [
-      { when: "2023", title: "Innovation & Invention Second Prize", org: "China Invention Association", desc: "「提高原油采收率和井壁完整性的功能性纳米材料的关键技术和应用」 — Key technologies and applications of functional nanomaterials for improving crude oil recovery and wellbore integrity.", images: [33] },
-      { when: "2024", title: "Best Oral Presentation Award", org: "International Conference on Energy Transition and Exhibition (ICETE24)", desc: "", images: [34,25] },
-      { when: "2021", title: "PhD Posters Competition", org: "", desc: "", images: [35] },
-      { when: "2022–2023", title: "Best Innovation Mentor", org: "", desc: "", images: [36] },
-      { when: "2021", title: "XPRIZE Top 10", org: "Musk Foundation / XPRIZE", desc: "", images: [37] },
+      { when: "2025", title: "SMART CDR Competition", org: "The only Chinese team", desc: "", links:[{label:"Competition page ↗", url:"https://mission-innovation.net/missions/carbon-dioxide-removal/smart-cdr-competition/"}], images: [47] },
+      { when: "2024", title: "The Innovandi Open Challenge", org: "Top 30", desc: "", links:[{label:"Challenge page ↗", url:"https://gccassociation.org/innovandi/openchallenge24/"}], images: [48] },
+      { when: "2021", title: "XPRIZE Carbon Removal", org: "China Region Top 10", desc: "", images: [49,50] },
+      { when: "2016", title: "AAPG Imperial Barrel Awards", org: "", desc: "", images: [51] },
     ]
   },
   {
-    id: "conferences", title: "Conferences",
+    id: "academic-outputs", title: "Academic Outputs",
     note: "",
     items: [
-      { when: "2023", title: "Annual Academic Conference of the Climate Change Working Committee & 2nd CCUS Technology Conference", org: "China Society for Sustainable Development (Sep 22–24, 2023)", desc: "", images: [22] },
-      { when: "2023", title: "7th CCUS International Forum — Youth Academic Forum", org: "Mar 17–18, 2023", desc: "", images: [23] },
-      { when: "2024", title: "2nd China Environmental Science Youth Forum", org: "《中国环境科学》青年论坛", desc: "", images: [24] },
-      { when: "2024", title: "International Conference on Energy Transition and Exhibition (ICETE24)", org: "", desc: "", images: [25] },
-      { when: "2024", title: "Global Young Academy Asian Event — Global Pi Roundtable", org: "", desc: "", images: [26] },
+      { when: "", title: "Technological Transfer — Low Carbon Cement", org: "", desc: "", images: [52] },
+      { when: "", title: "Patents", org: "", desc: "", images: [53,54] },
+      { when: "", title: "Software Copyright", org: "", desc: "", images: [55] },
     ]
   },
   {
-    id: "funding", title: "Funding & Science Foundations",
-    note: "Competitive foreign-scholar research grants, as applicant.",
-    items: [
-      { when: "2025–2026", title: "National Natural Science Foundation of China — Foreign Scholar Programme", org: "Applicant · Jan 2025 – Dec 2026", desc: "", images: [30] },
-      { when: "2023–2025", title: "Beijing Natural Science Foundation — Foreign Scholar Programme", org: "Applicant · Oct 2023 – Sep 2025", desc: "", images: [31,32] },
-    ]
-  },
-  {
-    id: "affiliation", title: "Professional Affiliations",
+    id: "organizing", title: "Organizing Person / PIC",
     note: "",
     items: [
-      { when: "", title: "Secretary General", org: "MAYCHAM CHINA — Malaysian Chamber of Commerce and Industry in China", desc: "", images: [11] },
-      { when: "", title: "Certified CO₂-EOR Engineer", org: "", desc: "", images: [12] },
-      { when: "", title: "Certified Technologist", org: "Malaysia Board of Technologists (MBOT)", desc: "", images: [13] },
-      { when: "", title: "Peer Reviewer", org: "", desc: "", images: [14] },
-      { when: "", title: "Member", org: "International Disaster Response Network", desc: "", images: [15] },
-      { when: "", title: "Invited Trainer", org: "National ICAN China Youth Green Development Innovation Competition", desc: "", images: [16] },
-      { when: "", title: "Alumni Mentor", org: "University College Dublin", desc: "", images: [17] },
+      { when: "2026", title: "Facilitator of Youth Entrepreneurs Study Tour to Beijing", org: "", desc: "", links:[{label:"Article ↗", url:"https://mp.weixin.qq.com/s/l9AHFpF4_DxykJ3_QvPVGg"}], images: [56] },
+      { when: "2025", title: "MAYCHAM–China AI Innovation MOU", org: "", desc: "", links:[{label:"Article ↗", url:"https://mp.weixin.qq.com/s/lyLBbn4erJEtACdniBsKLA"}], images: [57] },
+      { when: "2024", title: "Conceived and hosted MAYCHAM China's flagship online seminar on Malaysia–China green energy cooperation", org: "", desc: "", links:[{label:"Article ↗", url:"https://mp.weixin.qq.com/s/WNOCGgZ5J3nEsfQ7OdWUEA"}], images: [58,59] },
     ]
   },
   {
-    id: "organizing", title: "Organizing & Community Leadership",
+    id: "diplomatic", title: "Invited Guest for Diplomatic Events",
     note: "",
     items: [
-      { when: "2026", title: "China–Malaysia Youth Study Programme", org: "Organizer", desc: "", links:[{label:"Article ↗", url:"https://mp.weixin.qq.com/s/l9AHFpF4_DxykJ3_QvPVGg"}], images: [45] },
-      { when: "2025", title: "China–Malaysia AI Innovation Cooperation MOU", org: "Facilitated signing via the Qidian Star platform", desc: "", links:[{label:"Article ↗", url:"https://mp.weixin.qq.com/s/lyLBbn4erJEtACdniBsKLA"}], images: [46] },
-      { when: "2024", title: "\"Green Bridge: China–Malaysia Green Energy Cooperation & Market Opportunities\"", org: "Planned, organized, and hosted online webinar", desc: "", links:[{label:"Article ↗", url:"https://mp.weixin.qq.com/s/WNOCGgZ5J3nEsfQ7OdWUEA"}], images: [47,48] },
-    ]
-  },
-  {
-    id: "diplomatic", title: "Diplomatic Events",
-    note: "",
-    items: [
-      { when: "2024", title: "State Banquet — 50th Anniversary of China–Malaysia Diplomatic Relations", org: "Diaoyutai State Guesthouse, Beijing", desc: "", images: [49,50] },
-      { when: "2024", title: "Reception for the 75th Anniversary of the Founding of the People's Republic of China", org: "Foreign Experts Reception, invited attendee", desc: "", images: [51,52] },
-      { when: "2024", title: "Received by Malaysia's Yang di-Pertuan Agong during State Visit to China", org: "Beijing — covered by official media", desc: "", images: [53] },
-    ]
-  },
-  {
-    id: "courses", title: "Course Completion & Speaker Certificates",
-    note: "",
-    items: [
-      { when: "2025", title: "Course Completion Certificate", org: "Cited by the author as a personally formative programme", desc: "", images: [58] },
-      { when: "", title: "Speaker Certificate — Sabah Convention", org: "", desc: "", images: [59] },
-      { when: "", title: "Speaker Certificate — JCI", org: "", desc: "", images: [60] },
+      { when: "2024", title: "Attended the Diaoyutai State Guesthouse 50th Anniversary of Malaysia–China Diplomatic Relations banquet", org: "", desc: "", images: [60,61] },
+      { when: "2024", title: "Invited to the Great Hall of the People", org: "One of ~1,800 top foreign experts", desc: "", images: [62,63] },
+      { when: "2024", title: "Received by the Malaysian King during his Beijing state visit", org: "", desc: "", images: [64] },
     ]
   },
   {
     id: "media", title: "Media Coverage",
     note: "",
     items: [
-      { when: "2020", title: "Featured UCD Alumni", org: "University College Dublin Alumni Magazine", desc: "", links:[{label:"Read feature ↗", url:"https://alumni.ucd.ie/magazine/2020/irelands-global-university/"}], images: [17,61,62] },
-      { when: "", title: "Alumni Spotlight", org: "Curtin University Malaysia — 25th Anniversary Series", desc: "", links:[{label:"YouTube ↗", url:"https://www.youtube.com/watch?v=JejgyeaXUEw&ab_channel=CurtinUniversityMalaysia"}, {label:"Facebook ↗", url:"https://www.facebook.com/CurtinMalaysia/videos/alumni-spotlight-dr-michelle-tiong-curtin-malaysias-25th-anniversary-series/513677764985042/"}], images: [] },
-      { when: "", title: "Interviewed as an International Researcher in China", org: "", desc: "", links:[{label:"Read article ↗", url:"https://mp.weixin.qq.com/s/EwowxkLEGtyXNcJxuY9T9g"}], images: [63] },
-      { when: "", title: "Interviewed as One Belt One Road Youth Representative", org: "", desc: "", links:[{label:"Read article ↗", url:"https://www.163.com/dy/article/HFB3SNI80552M4Y3.html"}], images: [64] },
-      { when: "", title: "Featured — Sharing of One Belt One Road Youth Representative", org: "", desc: "", links:[{label:"Read article ↗", url:"https://mp.weixin.qq.com/s/wzXFqKMA029HJBNVaA_A5Q"}], images: [65] },
-      { when: "2025", title: "Featured in Sarawak Government Media for TOYM Award", org: "", desc: "", links:[{label:"Read article ↗", url:"https://premierdept.sarawak.gov.my/web/subpage/news_view/25192/UKAS"}], images: [66] },
+      { when: "", title: "Facilitator of Youth Entrepreneurs Study Tour to Beijing", org: "", desc: "", links:[{label:"Read article ↗", url:"https://mp.weixin.qq.com/s/l9AHFpF4_DxykJ3_QvPVGg"}], images: [65] },
+      { when: "", title: "Alumni Spotlight", org: "Curtin University Malaysia — 25th Anniversary Series", desc: "", links:[{label:"YouTube ↗", url:"https://www.youtube.com/watch?v=JejgyeaXUEw&ab_channel=CurtinUniversityMalaysia"}, {label:"Facebook ↗", url:"https://www.facebook.com/CurtinMalaysia/videos/alumni-spotlight-dr-michelle-tiong-curtin-malaysias-25th-anniversary-series/513677764985042/"}], images: [66] },
+      { when: "", title: "Interviewed as an International Researcher in China", org: "", desc: "", links:[{label:"Read article ↗", url:"https://www.163.com/dy/article/HFB3SNI80552M4Y3.html"}], images: [67] },
+      { when: "", title: "Interviewed as One Belt One Road Youth Representative", org: "", desc: "", links:[{label:"Read article ↗", url:"https://mp.weixin.qq.com/s/EwowxkLEGtyXNcJxuY9T9g"}], images: [68] },
+      { when: "", title: "Featured — Sharing of One Belt One Road Youth Representative", org: "", desc: "", links:[{label:"Read article ↗", url:"https://mp.weixin.qq.com/s/wzXFqKMA029HJBNVaA_A5Q"}], images: [69] },
+      { when: "", title: "Featured in Sarawak Government Media for TOYM Award", org: "", desc: "", links:[{label:"Read article ↗", url:"https://premierdept.sarawak.gov.my/web/subpage/news_view/25192/UKAS"}], images: [70] },
+      { when: "", title: "Received by the King of Malaysia", org: "", desc: "", links:[{label:"Facebook ↗", url:"https://www.facebook.com/officialsultanibrahim/posts/yang-di-pertuan-agong-berangkat-ke-majlis-santapan-bersama-diaspora-malaysiakdym/1092917128859574/"}, {label:"The Star (YouTube) ↗", url:"https://www.youtube.com/watch?v=UNHPaEqTnLE"}], images: [71,72] },
     ]
   },
 ];
